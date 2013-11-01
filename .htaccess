@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteRule ^([a-z0-9]*)/?$ index.php?PgOpen=$1 [L,QSA]
+RewriteRule ^([a-z0-9]*)/alias-([^/]+)/?$ index.php?PgOpen=$1&alias=$2 [L,QSA]
+RewriteRule ^([a-z0-9]*)/user-([a-z0-9]*)/?$ index.php?PgOpen=$1&user_login=$2 [L,QSA]
+RewriteRule ^([a-z0-9]*)/action-([a-z0-9]*)/?$ index.php?PgOpen=$1&action=$2 [L,QSA]
+
+
+AddDefaultCharset utf-8
+AddType 'application/x-httpd-php;charset=utf-8' php
+AddType 'text/html;charset=utf-8' html
